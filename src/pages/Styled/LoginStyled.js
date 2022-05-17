@@ -13,7 +13,7 @@ export const Imagem = styled.div`
     margin-top: 88px;
 `
 
-export const CenterBuntton = styled.div`
+export const CenterButton = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
