@@ -43,7 +43,7 @@ export const Imagem = styled.div`
     margin-top: 70px;
 `
 
-export const CenterBuntton = styled.div`
+export const CenterButton = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
