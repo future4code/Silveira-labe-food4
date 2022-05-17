@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom"
 import { goToSignUp } from "../routes/cordinator"
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import { useForm } from "../hook/useForm"
+import { useForm } from "../hooks/useForm"
 import { login } from "../services/user"
-import { Container, Imagem, CenterBuntton } from "./Styled/LoginStyled";
+import { Container, Imagem, CenterButton } from "./Styled/LoginStyled";
 import logo from "../assets/logo.png";
 import { TextPassword } from "./Styled/LoginStyled";
 import VisibilityIcon from '@mui/icons-material/Visibility';
@@ -72,10 +72,10 @@ export function Login() {
                     }
                 </TextPassword>
                 
-                <CenterBuntton>
-                    <Button style={{backgroundColor: '#E86E5A',color: 'black', fontWeight: 'bold'}} type="submit" variant="contained" onClick={login}> Entrar </Button>
+                <CenterButton>
+                    <Button style={{backgroundColor: '#E86E5A',color: 'black', fontWeight: 'bold'}} type="submit" variant="contained"> Entrar </Button>
                     <h5>Não possui cadastro? <a onClick={() => goToSignUp(nav)}>Clique aqui</a></h5>
-                </CenterBuntton>
+                </CenterButton>
             </form>
         </Container>
     )
