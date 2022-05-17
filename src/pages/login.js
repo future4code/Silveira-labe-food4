@@ -1,21 +1,54 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
-import { goToCadastro, goToCarrinho, goToHome, goToPerfil, goToRestaurante, goToSignUp } from "../routes/cordinator"
+import {  goToSignUp } from "../routes/cordinator"
 import Button from '@mui/material/Button';
-import { Input, TextFields } from "@mui/icons-material";
+// import { Input, TextFields } from "@mui/icons-material";
+import {useForm} from "../hook/useForm"
+import {login} from "../services/user"
+import { Container } from "./Styled/LoginStyled";
 
 export function Login(){
-const nav = useNavigate()
+    const [form, onChange] = useForm({ email: "", password: ""});
+    const nav = useNavigate();
+
+    const onSubmit = async (event) => {
+        event.prevenDefault();
+        await login(form, nav)
+    }
 
     return(
         <div>
-            <h1>Login</h1>
-            <Button variant="contained" onClick={()=> goToSignUp(nav)}>SignUp</Button>
-            <Button variant="outlined" onClick={()=> goToCadastro(nav)}>Cadastro</Button>
-            <Button variant="contained" onClick={()=> goToHome(nav)}>Home</Button>
-            <Button variant="outlined" onClick={()=> goToRestaurante(nav,'B3b24b34b1b2')}>Restaurante</Button>
-            <Button variant="contained" onClick={()=> goToPerfil(nav)}>Perfil</Button>
-            <Button variant="outlined" onClick={()=> goToCarrinho(nav)}>Carrinho</Button>
+            <Container>
+                <form onSubmit={onSubmit}>
+                    <p>E-mail:</p>
+                    <input
+                    placeholder="Email"
+                    name={"email"}
+                    value={form.email}
+                    onChange={onChange}
+                    label={"Email"}
+                    variant={"outlined"}
+                    type={"email"}
+                    required
+                    ></input>
+                    <p>Senha:</p>
+                    <input
+                    placeholder="Senha"
+                    name={"password"}
+                    value={form.password}
+                    onChange={onChange}
+                    label={"Senha"}
+                    type={"password"}
+                    required
+                    ></input>
+                    <div>
+                        <Button onClick={login}> Entrar </Button>
+                        <Button class="btn" onClick={() => goToSignUp(nav)}>
+                        Cadastrar
+                        </Button>
+                    </div>
+                </form>
+            </Container>
         </div>
     )
-}
+} 
