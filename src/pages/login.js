@@ -5,7 +5,8 @@ import Button from '@mui/material/Button';
 // import { Input, TextFields } from "@mui/icons-material";
 import {useForm} from "../hook/useForm"
 import {login} from "../services/user"
-import { Container } from "./Styled/LoginStyled";
+import { Container,  Imagem, CenterBuntton } from "./Styled/LoginStyled";
+import logo  from "../assets/logo.png";
 
 export function Login(){
     const [form, onChange] = useForm({ email: "", password: ""});
@@ -18,11 +19,14 @@ export function Login(){
 
     return(
         <div>
+            <Imagem>
+                <img src={logo} alt="Logo" />
+            </ Imagem>
             <Container>
                 <form onSubmit={onSubmit}>
                     <p>E-mail:</p>
                     <input
-                    placeholder="Email"
+                    placeholder="email@email.com"
                     name={"email"}
                     value={form.email}
                     onChange={onChange}
@@ -33,7 +37,7 @@ export function Login(){
                     ></input>
                     <p>Senha:</p>
                     <input
-                    placeholder="Senha"
+                    placeholder="Mínimo 6 caracteres"
                     name={"password"}
                     value={form.password}
                     onChange={onChange}
@@ -41,12 +45,14 @@ export function Login(){
                     type={"password"}
                     required
                     ></input>
-                    <div>
-                        <Button onClick={login}> Entrar </Button>
-                        <Button class="btn" onClick={() => goToSignUp(nav)}>
+                    <CenterBuntton>
+                        <Button variant="contained" onClick={login}> Entrar </Button>
+                        <Button variant="contained" onClick={() => goToSignUp(nav)}>
                         Cadastrar
-                        </Button>
-                    </div>
+                        </Button> 
+                    </CenterBuntton>
+                    
+                   
                 </form>
             </Container>
         </div>
