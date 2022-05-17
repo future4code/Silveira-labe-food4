@@ -51,6 +51,11 @@ export const CenterButton = styled.div`
     margin-top: 5px;
     width: 100%;
 
+    a{
+        color: #E86E5A;
+        text-decoration: underline;
+    }
+
     Button{
         width: 95%;
         margin: 10px;
