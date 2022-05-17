@@ -1,4 +1,6 @@
-import React from "react"
+import React from "react";
+import { useForm } from "../hook/useForm";
+// import { SingUp } from "../hook"
 
 export function SignUp(){
     return(
