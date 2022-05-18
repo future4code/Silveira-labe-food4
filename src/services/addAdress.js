@@ -1,5 +1,7 @@
 import axios from "axios";
 import { BASE_URL } from "../constants/urls";
+import { goToHome } from "../routes/cordinator";
+
 
 export const createAddress = (body, clear, nav) => {
     axios.put(`${BASE_URL}/address`, body, {
@@ -9,8 +11,9 @@ export const createAddress = (body, clear, nav) => {
     })
         .then((res) => {
             localStorage.setItem("token", res.data.token)
-            console.log(res.response.data.message)
+            console.log(res.data.token)
             clear()
+            goToHome(nav)
         }).catch((err) => {
             alert("Ocorreu um erro!!")
             console.log(err.response.data.message);

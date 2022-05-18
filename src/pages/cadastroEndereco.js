@@ -13,9 +13,7 @@ export function CadastroEndereco() {
 
     const onSubmitForm = (event) => {
         event.preventDefault()
-        createAddress()
-        clear()
-        goToHome(nav)
+        createAddress(form,clear,nav)
     }
 
     return (
