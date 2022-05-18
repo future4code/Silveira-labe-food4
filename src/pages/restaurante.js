@@ -1,3 +1,4 @@
+import { Propane } from '@mui/icons-material';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
@@ -17,12 +18,12 @@ export const Restaurante = () => {
     .then((response) => {
       setRest(response.data.restaurant)
       setProdutos(response.data.restaurant.products)
-      console.log(response.data.restaurant)
-      console.log(response.data.restaurant.products)
+
+      
     }).catch((error) => {
     });
   };
-
+  console.log(produtos)
   useEffect(()=>{
     pegaRestDetail()
   },[])
@@ -44,7 +45,13 @@ export const Restaurante = () => {
       </Local>
       : null}      
       {produtos.length >0 ?  produtos.map((produto) => {
-            return <CardProduto key={produto.id} restId={params.id} produto={produto}/>;
+            return <CardProduto key={produto.id} 
+            restId={params.id} 
+            fotoProduto={produto.photoUrl} 
+            nome={produto.name} 
+            descricao={produto.description} 
+            preco= {produto.price}
+            />;
           }) :
           <h2>Carregando lista de produtos!</h2>}
     </MainContainer>
