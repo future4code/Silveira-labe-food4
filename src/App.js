@@ -1,6 +1,5 @@
 import React from 'react';
 import {createGlobalStyle} from 'styled-components'
-import { MenuFixo } from './components/MenuFixo';
 import {Router} from './routes/routes';
 
 const GLobalStyle = createGlobalStyle`
