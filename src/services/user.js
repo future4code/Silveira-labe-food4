@@ -4,7 +4,7 @@ import { goToHome } from "../routes/cordinator";
 
 export const login = async (body, nav) => {
     try{
-        const res= await axios.post(`${BASE_URL}/rappi4B/login`, body)
+        const res= await axios.post(`${BASE_URL}/login`, body)
         console.log(res.data.token)
         localStorage.setItem("token", res.data.token);
         goToHome(nav);

@@ -1,7 +1,7 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export function useRequestData(initialState, url) {
+export function useRequestData(url, initialState) {
     const [data, setData] = useState(initialState);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -9,8 +9,10 @@ export function useRequestData(initialState, url) {
         try {
             setIsLoading(true);
 
+            const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJXVU1Bc0JSS2hGcGZYbmdPTEtjIiwibmFtZSI6Ikx1aXMiLCJlbWFpbCI6Imx1aXNfZW1haWxAaG90bWFpbC5jb20iLCJjcGYiOiIxMTEuMTExLjExMS0xNSIsImhhc0FkZHJlc3MiOnRydWUsImFkZHJlc3MiOiJSLiBkYSBHbMOzcmlhLCAyMTAsIENhc2EgLSBDZW50cm8iLCJpYXQiOjE2NTI4MTU1MzZ9.yKNU8UZnKAEoZN_KYX9AuDtpB3rg9yPS58GNrnhhZmY"
+
             const headers = {
-                headers: {auth: localStorage.getItem("token")}
+                headers: {auth: token}
             };
 
             const response = await axios.get(`${url}`, headers);
