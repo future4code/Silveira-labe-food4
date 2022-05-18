@@ -2,6 +2,7 @@ import React from 'react';
 import {createGlobalStyle} from 'styled-components'
 import {Router} from './routes/routes';
 
+
 const GLobalStyle = createGlobalStyle`
 
 body{
@@ -16,6 +17,7 @@ body{
 function App() {
   return (
     <div >
+    
       <GLobalStyle/>
       <Router/>
     </div>
