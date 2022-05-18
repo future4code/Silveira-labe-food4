@@ -10,6 +10,7 @@ export function useRequestData(url, initialState) {
             setIsLoading(true);
 
             const headers = {
+
                 headers: {auth: localStorage.getItem("token")}
             };
 
