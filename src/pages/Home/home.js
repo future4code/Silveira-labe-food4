@@ -2,12 +2,14 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import { CardRestaurante } from "../../components/CardRestaurante";
+import { InputBuscaRestaurante } from "../../components/InputBuscaRestaurante";
 import { MenuFixo } from "../../components/MenuFixo";
 
 import { BASE_URL } from "../../constants/urls";
 
 import { useRequestData } from "../../hooks/useRequestData";
 import { goToRestaurante } from "../../routes/cordinator";
+import { MainContainer, Title, InputContainer } from "./styled";
 
 export function Home() {
     const {data, getData, isLoading} = useRequestData(`${BASE_URL}/restaurants`, []);
@@ -16,6 +18,7 @@ export function Home() {
     const listaRestaurantes = data.restaurants && data.restaurants.map((restaurante) => {
         return (
             <CardRestaurante
+             key={restaurante.id}
              logo={restaurante.logoUrl}
              nome={restaurante.name}
              tempoEntrega={restaurante.deliveryTime}
@@ -25,16 +28,19 @@ export function Home() {
     })
 
     return (
-        <div>
-            <h1>Rappi4</h1>
+        <>
+                <Title>Rappi4</Title>
 
-            <input placeholder="Restaurante" />
+            {isLoading && <p style={{textAlign: "center"}}>Carregando...</p>}
+            
+            <MainContainer>
+                <InputBuscaRestaurante />
 
-            {isLoading && <p>Carregando...</p>}
+                {listaRestaurantes}
 
-            {listaRestaurantes}
+                <MenuFixo navigate={navigate} />
+            </MainContainer>
 
-            <MenuFixo />
-        </div>
+        </>
     )
 };
