@@ -1,17 +1,21 @@
 import React from 'react'
-import { Banner, Botao, Conteudo, MainContainer } from './styled'
+import { Banner, Conteudo, MainContainer } from './styled'
 
 const CardProduto = (props) => {
     console.log(props)
   return (
-    <MainContainer onClick={props.Entrar}>
+    <MainContainer>
         <Banner src={props.logo}/>
         <Conteudo>
+          <div>
+        <img src={props.fotoProduto}/>
+        </div>       
             <p className='titulo'>{props.nome}</p>
-            
-            <p>Frete: R${props.shipping}</p>
-            <p>{(props.deliveryTime)} min</p>
-            {/* <p className='preco'>R${props.restaurante.price}0</p> */}
+           <p>{(props.descricao)}</p>
+            <p>R${(props.preco)}0,00</p>
+      
+           
+        
         </Conteudo>
     </MainContainer>
   )

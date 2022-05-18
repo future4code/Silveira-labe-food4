@@ -40,13 +40,3 @@ export const Banner = styled.div`
     background-position: center;
     background-size: cover;
 `
-export const Botao = styled.button`
-    display: flex;
-    flex-flow: column;
-    align-self: flex-end;
-    position: absolute;
-    right: 0%;
-    border-radius: 15px 0px 15px 0px;
-    border: 1px solid black;
-    font-family: 'Roboto', sans-serif;
-`
