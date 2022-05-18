@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {createGlobalStyle} from 'styled-components'
 import {Router} from './routes/routes';
 import styled from 'styled-components';
+import splashScreen from './assets/SplashScreen.png'
 
 
 const GLobalStyle = createGlobalStyle`
@@ -18,7 +19,9 @@ body{
 const SplashScreen = styled.div`
 width: 100vw;
 height: 100vh;
-background-color: red;
+background-image: url(${splashScreen});
+background-size: cover;
+background-repeat: no-repeat;
 `
 
 function App() {
@@ -27,7 +30,7 @@ const [loading,setLoading] = useState(true)
 useEffect(()=>{
   setTimeout(()=>{
     setLoading(false)
-  },2000)
+  },3000)
 },[])
 
   return (
