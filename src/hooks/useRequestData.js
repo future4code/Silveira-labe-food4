@@ -10,7 +10,8 @@ export function useRequestData(url, initialState) {
             setIsLoading(true);
 
             const headers = {
-                headers: {auth: localStorage.getItem('token')}
+
+                headers: {auth: localStorage.getItem("token")}
             };
 
             const response = await axios.get(`${url}`, headers);

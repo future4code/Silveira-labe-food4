@@ -17,16 +17,16 @@ export function CardRestaurante({logo, nome, tempoEntrega, frete, onClick}) {
 
       <CardContent sx={{ display: "flex", justifyContent: "space-between" }}>
         <Box>
-            <Typography variant="body1" sx={{color: "red"}}>
+            <Typography variant="body1" sx={{color: "#e86e5a"}}>
                 {nome}
             </Typography>
-            <Typography variant="body1" color="text.secondary">
+            <Typography variant="body1" sx={{color: "#b8b8b8"}}>
                 {tempoEntrega} min
             </Typography>
         </Box>
 
         <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "flex-end" }}>
-            <Typography variant="body1" color="text.secondary">
+            <Typography variant="body1" sx={{color: "#b8b8b8"}}>
                 Frete R${frete},00
             </Typography>
         </Box>
