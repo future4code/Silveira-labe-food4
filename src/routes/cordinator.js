@@ -26,3 +26,11 @@ export const goToPerfil = (nav)=> {
 export const goToCadastro = (nav)=> {
     nav('/cadastro')
 }
+
+export const goToEditProfile = (nav)=> {
+    nav('/editProfile')
+}
+
+export const goToEditAddress = (nav)=> {
+    nav('/editAddress')
+}
