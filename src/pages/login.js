@@ -2,13 +2,6 @@ import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { goToSignUp } from "../routes/cordinator"
 import Button from '@mui/material/Button';
-<<<<<<< HEAD
-// import { Input, TextFields } from "@mui/icons-material";
-import {useForm} from "../hooks/useForm"
-import {login} from "../services/user"
-import { Container,  Imagem, CenterBuntton } from "./Styled/LoginStyled";
-import logo  from "../assets/logo.png";
-=======
 import TextField from '@mui/material/TextField';
 import { useForm } from "../hooks/useForm"
 import { login } from "../services/user"
@@ -21,7 +14,6 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 export function Login() {
     const [form, onChange] = useForm({ email: "", password: "" });
     const [viewPassword, setViewPassword] = useState('password')
->>>>>>> 6e150da304c0c6058d6a4c2108eefffbca29cd4e
 
     const nav = useNavigate();
 

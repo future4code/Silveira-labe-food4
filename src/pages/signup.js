@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import { useForm } from "../hooks/useForm";
-// import { SingUp } from "../hook"
-=======
->>>>>>> 6e150da304c0c6058d6a4c2108eefffbca29cd4e
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "../hooks/useForm";
