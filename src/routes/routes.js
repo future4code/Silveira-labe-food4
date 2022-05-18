@@ -7,6 +7,8 @@ import { CadastroEndereco } from '../pages/cadastroEndereco'
 import { Carrinho } from '../pages/carrinho'
 import { Perfil } from '../pages/perfil'
 import { Restaurante } from '../pages/restaurante'
+import { EditProfile } from "../pages/editProfile";
+import { EditAddress } from "../pages/editAddress";
 
 
 export function Router() {
@@ -20,6 +22,8 @@ export function Router() {
                 <Route path="carrinho" element={<Carrinho />} />
                 <Route path="perfil" element={<Perfil />} />
                 <Route path="restaurante/:id" element={<Restaurante />} />
+                <Route path="editProfile" element={<EditProfile />} />
+                <Route path="editAddress" element={<EditAddress />} />
             </Routes>
         </BrowserRouter>
     )

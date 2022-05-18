@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {createGlobalStyle} from 'styled-components'
 import {Router} from './routes/routes';
+import styled from 'styled-components';
 
 const GLobalStyle = createGlobalStyle`
 
@@ -13,11 +14,25 @@ body{
 }
 `
 
+const SplashScreen = styled.div`
+width: 100vw;
+height: 100vh;
+background-color: red;
+`
+
 function App() {
+const [loading,setLoading] = useState(true)
+
+useEffect(()=>{
+  setTimeout(()=>{
+    setLoading(false)
+  },2000)
+},[])
+
   return (
     <div >
       <GLobalStyle/>
-      <Router/>
+      {loading? <SplashScreen /> : <Router/>}
     </div>
   );
 }
