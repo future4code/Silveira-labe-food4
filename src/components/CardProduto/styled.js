@@ -4,16 +4,12 @@ export const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 99%;
-    max-width: px;
-    /* max-height: 250px; */
+    margin: 5px;
     background-color: white;
     border: 0.8px solid #C7C7CC;
     border-radius: 16px;
-    /* margin: 5px 0; */
     word-wrap: break-word;
     color: #D1D1D6;
-    /* position: relative; */
     p{
         margin: 4px 0px;
         margin-left: 10px;
@@ -21,10 +17,31 @@ export const MainContainer = styled.div`
     .titulo{
         color: #E86E5A;
     }
-    .preco{
-        color: black;
+
+`
+export const DivFoto = styled.div`
+    background-size: contain;
+    img{
+        width: 358px;
+        height: 187px;
+        border-radius: 16px;
     }
 `
+
+export const DivFoto = styled.div`
+    background-size: contain;
+    img{
+        width: 358px;
+        height: 187px;
+        border-radius: 3px;
+    }
+`
+
+export const DivDesc = styled.div`
+    display: flex;
+    justify-content: space-between;
+`
+
 export const Conteudo = styled.div`
     display: flex;
     flex-flow: column;
@@ -33,10 +50,15 @@ export const Conteudo = styled.div`
 export const Banner = styled.div`
     display: flex;
     flex-flow: column;
-    width: 100%;
-    height: 120px;
     border-radius: 16px 16px 0px 0px;
     background-image: url(${(props) => props.src});
     background-position: center;
     background-size: cover;
+`
+export const Title = styled.div`
+color: black;
+`
+
+export const Price = styled.div`
+color: black;
 `
