@@ -1,7 +1,26 @@
-# Layout: rappi4B
+# Rappi4B
 
+## Descrição do Projeto
 
+descrever o projeto aqui
 
+##Imagens
+
+imagens do projeto aqui
+
+# Tecnologias
+
+tecnologias usadas
+
+#O que funciona
+
+funcionalidades ja em uso
+
+#O que não funciona
+
+funcionalidades que faltaram ou estao com defeito
+
+# Contribuidores
 <table>
   <tr>
     <td align="center">
