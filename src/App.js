@@ -3,6 +3,7 @@ import {createGlobalStyle} from 'styled-components'
 import {Router} from './routes/routes';
 import styled from 'styled-components';
 import splashScreen from './assets/SplashScreen.png'
+import GlobalState from './context/GlobalState';
 
 
 const GLobalStyle = createGlobalStyle`
@@ -35,9 +36,10 @@ useEffect(()=>{
 
   return (
     <div >
-    
+    <GlobalState>
       <GLobalStyle/>
       {loading? <SplashScreen /> : <Router/>}
+    </GlobalState>
     </div>
   );
 }
