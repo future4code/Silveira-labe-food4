@@ -31,8 +31,8 @@ export function MenuFixo({navigate, isHomePage, isCartPage, isProfilePage}) {
         >
 
           <BottomNavigationAction icon={ <img src={isHomePage ? iconeHomeAtivo : iconeHomeBranco} alt="" /> } onClick={ () => goToHome(navigate) } />
-          <BottomNavigationAction icon={ <img src={isCartPage ? iconeCarrinhoAtivo : iconeCarrinhoBranco} alt="" /> } onClick={ () => goToCarrinho(navigate)} />
-          <BottomNavigationAction icon={ <img src={isProfilePage ? iconePerfilAtivo : iconePerfilBranco} alt="" /> } onClick={ () => goToPerfil(navigate)} />
+          <BottomNavigationAction icon={ <img src={isCartPage ? iconeCarrinhoAtivo : iconeCarrinhoBranco} alt="" /> } onClick={ () => goToCarrinho(navigate) } />
+          <BottomNavigationAction icon={ <img src={isProfilePage ? iconePerfilAtivo : iconePerfilBranco} alt="" /> } onClick={ () => goToPerfil(navigate) } />
         </BottomNavigation>
 
       </Paper>

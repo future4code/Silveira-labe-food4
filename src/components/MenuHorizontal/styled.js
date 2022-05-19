@@ -15,6 +15,7 @@ export const CarouselContainer = styled.div`
 `
 
 export const Categories = styled.span`
-    margin-right: 1rem;
-    color: ${({categoriaAtual}) => categoriaAtual === "" ? "" : ""}
+    margin-right: 1.5rem;
+    font-weight: bolder;
+    color: ${({categoriaAtual, nomeCategoria}) => categoriaAtual === nomeCategoria ? "#e86e5a" : "black"};
 `

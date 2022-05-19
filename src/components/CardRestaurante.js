@@ -7,7 +7,7 @@ import { Box } from '@mui/material';
 
 export function CardRestaurante({logo, nome, tempoEntrega, frete, onClick}) {
   return (
-    <Card sx={{ minWidth: 345, maxWidth: 345, marginBottom: "1rem" }} onClick={onClick}>
+    <Card sx={{ minWidth: 345, maxWidth: 345, marginBottom: "1rem", border: "1px solid #b8b8b8" }} onClick={onClick}>
       <CardMedia sx={{ overflow: "hidden" }}
         component="img"
         height="140"
