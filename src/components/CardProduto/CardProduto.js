@@ -1,23 +1,26 @@
 import React from 'react'
-import { Banner, Conteudo, MainContainer } from './styled'
+import { Banner, Conteudo, DivDesc, DivFoto, MainContainer } from './styled'
 
 const CardProduto = (props) => {
-    console.log(props)
+  console.log(props)
   return (
     <MainContainer>
-        <Banner src={props.logo}/>
-        <Conteudo>
+      <Banner src={props.logo} />
+      <Conteudo>
+        <DivFoto>
+          <img src={props.fotoProduto} />
+        </DivFoto>
+        <DivDesc>
           <div>
-        <img src={props.fotoProduto}/>
-        </div>       
             <p className='titulo'>{props.nome}</p>
-           <p>{(props.descricao)}</p>
+            <p>{(props.descricao)}</p>
+          </div>
+          <div>
             <p>R${(props.preco)}0,00</p>
-      
-           
-        
-        </Conteudo>
-    </MainContainer>
+          </div>
+        </DivDesc>
+      </Conteudo>
+    </MainContainer >
   )
 }
 
