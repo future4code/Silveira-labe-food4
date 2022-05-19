@@ -14,11 +14,17 @@ export const Imagem = styled.div`
     margin-top: 88px;
 `
 
-export const CenterBuntton = styled.div`
+export const TextPassword = styled.div`
+    width: 100%;
+    position: relative;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 5px;
+    align-items:center;
+    margin-bottom: 10px;
+    .eye{
+        position: absolute;
+        right: 0;
+        margin-right: 15px;
+    }
 `
 
 export const Titulo = styled.div`
