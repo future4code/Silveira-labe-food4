@@ -9,6 +9,8 @@ export function MenuHorizontal({restaurants, categoriaSelecionada, setCategoriaS
                 return (
                     <Categories 
                      key={restaurant.id}
+                     nomeCategoria={restaurant.category}
+                     categoriaAtual={categoriaSelecionada}
                      onClick={categoriaSelecionada !== restaurant.category ? () => setCategoriaSelecionada(restaurant.category) : () => setCategoriaSelecionada(undefined)}>
                         {restaurant.category}
                     </Categories>
