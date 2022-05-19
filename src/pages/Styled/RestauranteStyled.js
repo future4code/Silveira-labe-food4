@@ -17,7 +17,7 @@ export const Local = styled.div`
     display: flex;
     flex-flow: column;
     width: 90%;
-    color: #D1D1D6;
+    color: #000000;
     margin-top: 20px;
     p{
         margin: 5px 15px;

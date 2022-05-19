@@ -17,10 +17,17 @@ export const MainContainer = styled.div`
     .titulo{
         color: #E86E5A;
     }
-    .preco{
-        color: black;
+
+`
+export const DivFoto = styled.div`
+    background-size: contain;
+    img{
+        width: 358px;
+        height: 187px;
+        border-radius: 16px;
     }
 `
+
 export const DivFoto = styled.div`
     background-size: contain;
     img{
@@ -47,4 +54,11 @@ export const Banner = styled.div`
     background-image: url(${(props) => props.src});
     background-position: center;
     background-size: cover;
+`
+export const Title = styled.div`
+color: black;
+`
+
+export const Price = styled.div`
+color: black;
 `
