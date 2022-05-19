@@ -61,7 +61,7 @@ const historyList = history.data.orders && history.data.orders.map((item)=>{
                     {!history.data.orders? historyList : <h3>Histórico vazio</h3>}
                 </DisplayCards>
             </History>
-            <MenuFixo />
+            <MenuFixo isProfilePage/>
         </Container>
     )
 }

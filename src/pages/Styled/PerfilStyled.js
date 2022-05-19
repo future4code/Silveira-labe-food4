@@ -30,7 +30,6 @@ export const Profile = styled.div`
 display: flex;
 justify-content: space-between;
 align-items: center;
-width: 100%;
 padding: 5px;
 
 div{
@@ -49,7 +48,6 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 background-color: #E5E5EA;
-width: 100%;
 padding: 5px;
 
 div{
