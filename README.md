@@ -1,4 +1,4 @@
-# Rappi4B
+# Rappi4B :meat_on_bone:
 
 ## Descrição do Projeto
 
