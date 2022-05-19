@@ -1,7 +1,5 @@
 # :hamburger: Rappi4B 
 
-## :mag: Descrição do Projeto
-
 descrever o projeto aqui
 
 ## :camera: Imagens
@@ -14,11 +12,15 @@ tecnologias usadas
 
 ## :thumbsup: O que funciona
 
-funcionalidades ja em uso
+- item1
+- item2
+- item3
 
 ## :thumbsdown: O que não funciona
 
-funcionalidades que faltaram ou estao com defeito
+- item1
+- item2
+- item3
 
 ## :sunglasses: Contribuidores
 
