@@ -22,7 +22,7 @@
     </td>
     <td align="center">
       <a href="#">
-        <img src="./src/assets/fotoJoao.jpg" height="50px" width="100px;" alt="foto do João"/><br>
+        <img src="./src/assets/fotoJoao.jpg" height="100px" width="100px;" alt="foto do João"/><br>
         <sub>
           <b>João Marcos Alves</b>
         </sub>
