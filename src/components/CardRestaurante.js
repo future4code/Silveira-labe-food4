@@ -7,7 +7,7 @@ import { Box } from '@mui/material';
 
 export function CardRestaurante({logo, nome, tempoEntrega, frete, onClick}) {
   return (
-    <Card sx={{ maxWidth: 345, marginBottom: "1rem" }} onClick={onClick}>
+    <Card sx={{ minWidth: 345, maxWidth: 345, marginBottom: "1rem" }} onClick={onClick}>
       <CardMedia sx={{ overflow: "hidden" }}
         component="img"
         height="140"
@@ -17,7 +17,7 @@ export function CardRestaurante({logo, nome, tempoEntrega, frete, onClick}) {
 
       <CardContent sx={{ display: "flex", justifyContent: "space-between" }}>
         <Box>
-            <Typography variant="body1" sx={{color: "#e86e5a"}}>
+            <Typography variant="body1" sx={{color: "#e86e5a", fontWeight: "bolder"}}>
                 {nome}
             </Typography>
             <Typography variant="body1" sx={{color: "#b8b8b8"}}>

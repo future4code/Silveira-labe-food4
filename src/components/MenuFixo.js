@@ -2,14 +2,21 @@ import * as React from 'react';
 
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import Paper from '@mui/material/Paper';
+
+import iconeHomeBranco from "../assets/white-homepage.svg";
+import iconeCarrinhoBranco from "../assets/white-shopping-cart.svg";
+import iconePerfilBranco from "../assets/white-profile.svg";
+import iconeHomeAtivo from "../assets/red-homepage.svg";
+import iconeCarrinhoAtivo from "../assets/red-shopping-cart.svg";
+import iconePerfilAtivo from "../assets/red-profile.svg";
+
 import { goToCarrinho, goToHome, goToPerfil } from '../routes/cordinator';
 
-export function MenuFixo({navigate}) {
+export function MenuFixo({navigate, isHomePage, isCartPage, isProfilePage}) {
   const [value, setValue] = React.useState(0);
 
   return (
@@ -23,9 +30,9 @@ export function MenuFixo({navigate}) {
           }}
         >
 
-          <BottomNavigationAction icon={<HomeOutlinedIcon fontSize="large" />} onClick={ () => goToHome(navigate) } />
-          <BottomNavigationAction icon={<ShoppingCartOutlinedIcon fontSize="large" onClick={ () => goToCarrinho(navigate) } />} />
-          <BottomNavigationAction icon={<PermIdentityOutlinedIcon fontSize="large" onClick={ () => goToPerfil(navigate) } />} />
+          <BottomNavigationAction icon={ <img src={isHomePage ? iconeHomeAtivo : iconeHomeBranco} alt="" /> } onClick={ () => goToHome(navigate) } />
+          <BottomNavigationAction icon={ <img src={isCartPage ? iconeCarrinhoAtivo : iconeCarrinhoBranco} alt="" /> } onClick={ () => goToCarrinho(navigate)} />
+          <BottomNavigationAction icon={ <img src={isProfilePage ? iconePerfilAtivo : iconePerfilBranco} alt="" /> } onClick={ () => goToPerfil(navigate)} />
         </BottomNavigation>
 
       </Paper>
