@@ -1,26 +1,27 @@
-# Rappi4B :meat_on_bone:
+# :hamburger: Rappi4B 
 
-## Descrição do Projeto
+## :mag: Descrição do Projeto
 
 descrever o projeto aqui
 
-## Imagens
+## :camera: Imagens
 
 imagens do projeto aqui
 
-## Tecnologias
+## :rocket: Tecnologias
 
 tecnologias usadas
 
-## O que funciona
+## :thumbsup: O que funciona
 
 funcionalidades ja em uso
 
-## O que não funciona
+## :thumbsdown: O que não funciona
 
 funcionalidades que faltaram ou estao com defeito
 
-## Contribuidores
+## :sunglasses: Contribuidores
+
 <table>
   <tr>
     <td align="center">
