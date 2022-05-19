@@ -4,23 +4,23 @@
 
 descrever o projeto aqui
 
-##Imagens
+## Imagens
 
 imagens do projeto aqui
 
-# Tecnologias
+## Tecnologias
 
 tecnologias usadas
 
-#O que funciona
+## O que funciona
 
 funcionalidades ja em uso
 
-#O que não funciona
+## O que não funciona
 
 funcionalidades que faltaram ou estao com defeito
 
-# Contribuidores
+## Contribuidores
 <table>
   <tr>
     <td align="center">
