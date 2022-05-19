@@ -22,7 +22,7 @@
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://miro.medium.com/max/360/0*1SkS3mSorArvY9kS.jpg" width="100px;" alt="Foto do Steve Jobs"/><br>
+        <img src="./src/assets/fotoJoao.jpg" width="100px;" alt="Foto do Steve Jobs"/><br>
         <sub>
           <b>João Marcos Alves</b>
         </sub>
