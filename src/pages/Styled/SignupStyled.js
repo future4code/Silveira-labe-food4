@@ -18,9 +18,8 @@ export const TextPassword = styled.div`
     width: 100%;
     position: relative;
     display: flex;
-    align-items: center;
+    align-items:center;
     margin-bottom: 10px;
-
     .eye{
         position: absolute;
         right: 0;

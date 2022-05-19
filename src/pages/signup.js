@@ -80,12 +80,13 @@ export function SignUp(){
                     <TextField
                     style={{width: '100%'}}
                     id="outlined-basic"
-                    placeholder="CPF"
+                    placeholder="000.000.000-00"
                     name={"cpf"}
                     onChange={onChange}
                     label={"CPF"}
                     variant={'outlined'}
                     value={form.cpf}
+                    pattern="([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})"
                     fullWidth
                     required
                     autoFocus
@@ -144,12 +145,3 @@ export function SignUp(){
         </div>
     )
 }
-
-
-
-
-
-
-
-
-
