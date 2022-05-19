@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";import { useNavigate } from "react-router-dom";
 import { useForm } from "../hooks/useForm";
 import { signUp } from "../services/user";
 import logo  from "../assets/logo.png";
