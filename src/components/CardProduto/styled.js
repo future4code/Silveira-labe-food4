@@ -28,6 +28,15 @@ export const DivFoto = styled.div`
     }
 `
 
+export const DivFoto = styled.div`
+    background-size: contain;
+    img{
+        width: 358px;
+        height: 187px;
+        border-radius: 3px;
+    }
+`
+
 export const DivDesc = styled.div`
     display: flex;
     justify-content: space-between;
