@@ -13,8 +13,19 @@ import { Banner,
 const CardProduto = (props) => {
   const {states,setters} = useContext(GlobalStateContext)
 
-  const teste = ()=> {
-    console.log(states.produtos)
+  const addToCart = (id) => {
+    const newProductList = [...states.cart];
+    newProductList.push(props.produto)
+    setters.setCart(newProductList)
+    console.log(states.cart)
+  }
+
+  const removeFromCart = (id) => {
+    const selectedProduct = states.produtos.findIndex((produto) => produto.id === id);
+    const newProductList = [...states.cart];
+    newProductList.splice(selectedProduct, 1)
+    setters.setCart(newProductList)
+    console.log(states.cart)
   }
 
   return (
@@ -33,7 +44,8 @@ const CardProduto = (props) => {
             <p>R${(props.preco)}</p>
           </Price>
         </DivDesc>
-        <button onClick={teste}>Adicionar</button>
+        <button onClick={() => addToCart(props.id)}>Adicionar</button>
+        <button onClick={() => removeFromCart(props.id)}>Remover</button>
       </Conteudo>
     </MainContainer >
   )

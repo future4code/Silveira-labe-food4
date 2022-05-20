@@ -53,6 +53,7 @@ export const Restaurante = () => {
         return <CardProduto key={produto.id}
           restId={params.id}
           id={produto.id}
+          produto={produto}
           fotoProduto={produto.photoUrl}
           nome={produto.name}
           descricao={produto.description}
