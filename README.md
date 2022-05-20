@@ -36,7 +36,7 @@ tecnologias usadas
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://s2.glbimg.com/FUcw2usZfSTL6yCCGj3L3v3SpJ8=/smart/e.glbimg.com/og/ed/f/original/2019/04/25/zuckerberg_podcast.jpg" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+        <img src="https://avatars.githubusercontent.com/u/79599836?v=4" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
         <sub>
           <b>Luis Felipe Melo </b>
         </sub>
@@ -44,7 +44,7 @@ tecnologias usadas
     </td>
     <td align="center">
       <a href="#">
-        <img src="./src/assets/fotoJoao.jpg" width="100px;" alt="foto do João"/><br>
+        <img src="https://avatars.githubusercontent.com/u/90418883?v=4" width="100px;" alt="foto do João"/><br>
         <sub>
           <b>João Marcos Alves</b>
         </sub>
@@ -52,7 +52,7 @@ tecnologias usadas
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://s2.glbimg.com/FUcw2usZfSTL6yCCGj3L3v3SpJ8=/smart/e.glbimg.com/og/ed/f/original/2019/04/25/zuckerberg_podcast.jpg" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+        <img src="https://avatars.githubusercontent.com/u/99013911?v=4" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
         <sub>
           <b>Luian Costa </b>
         </sub>
@@ -60,7 +60,7 @@ tecnologias usadas
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://s2.glbimg.com/FUcw2usZfSTL6yCCGj3L3v3SpJ8=/smart/e.glbimg.com/og/ed/f/original/2019/04/25/zuckerberg_podcast.jpg" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+        <img src="https://avatars.githubusercontent.com/u/99142835?v=4" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
         <sub>
           <b>Luis Gustavo</b>
         </sub>
