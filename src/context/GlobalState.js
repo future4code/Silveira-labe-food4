@@ -4,8 +4,9 @@ import React, { useState } from "react";
 const GlobalState = (props) => {
 
 const [cart,setCart] = useState([])
-const states = { cart }
-const setters = { setCart }
+const [produtos,setProdutos] = useState([])
+const states = { cart, produtos }
+const setters = { setCart, setProdutos }
 const requests = {}
 
     return <GlobalStateContext.Provider value={{states, setters, requests}}>

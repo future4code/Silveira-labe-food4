@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import GlobalStateContext from '../../context/GlobalStateContext'
 import { Banner, 
   Conteudo, 
   DivDesc, 
@@ -8,7 +9,14 @@ import { Banner,
   Price
  } from './styled'
 
+
 const CardProduto = (props) => {
+  const {states,setters} = useContext(GlobalStateContext)
+
+  const teste = ()=> {
+    console.log(states.produtos)
+  }
+
   return (
     <MainContainer>
       <Banner src={props.logo} />
@@ -25,7 +33,7 @@ const CardProduto = (props) => {
             <p>R${(props.preco)}</p>
           </Price>
         </DivDesc>
-        <button>Adicionar</button>
+        <button onClick={teste}>Adicionar</button>
       </Conteudo>
     </MainContainer >
   )

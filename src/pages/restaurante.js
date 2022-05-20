@@ -1,14 +1,15 @@
 import { Propane } from '@mui/icons-material';
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import CardProduto from '../components/CardProduto/CardProduto';
 import { BASE_URL } from '../constants/urls';
+import GlobalStateContext from '../context/GlobalStateContext';
 import { Banner, Local, MainContainer } from '../pages/Styled/RestauranteStyled';
 
 export const Restaurante = () => {
   const [rest, setRest] = useState({})
-  const [produtos, setProdutos] = useState([])
+  const {states,setters} = useContext(GlobalStateContext)
   const params = useParams()
   // const restaurante = 1
   const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJXVU1Bc0JSS2hGcGZYbmdPTEtjIiwibmFtZSI6Ikx1aXMiLCJlbWFpbCI6Imx1aXNfZW1haWxAaG90bWFpbC5jb20iLCJjcGYiOiIxMTEuMTExLjExMS0xNSIsImhhc0FkZHJlc3MiOnRydWUsImFkZHJlc3MiOiJSLiBkYSBHbMOzcmlhLCAyMTAsIENhc2EgLSBDZW50cm8iLCJpYXQiOjE2NTI4MTU1MzZ9.yKNU8UZnKAEoZN_KYX9AuDtpB3rg9yPS58GNrnhhZmY"
@@ -17,10 +18,10 @@ export const Restaurante = () => {
     axios.get(`${BASE_URL}/restaurants/${params.id}`, { headers: { auth: token } })
       .then((response) => {
         setRest(response.data.restaurant)
-        setProdutos(response.data.restaurant.products)
-
+        setters.setProdutos(response.data.restaurant.products)
 
       }).catch((error) => {
+        console.log(error)
       });
   };
 
@@ -48,9 +49,10 @@ export const Restaurante = () => {
           <p>{rest.address}</p>
         </Local>
         : null}
-      {produtos.length > 0 ? produtos.map((produto) => {
+      {states.produtos.length > 0 ? states.produtos.map((produto) => {
         return <CardProduto key={produto.id}
           restId={params.id}
+          id={produto.id}
           fotoProduto={produto.photoUrl}
           nome={produto.name}
           descricao={produto.description}
