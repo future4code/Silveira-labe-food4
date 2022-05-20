@@ -28,7 +28,7 @@ tecnologias usadas
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://avatars3.githubusercontent.com/u/31936044](https://avatars.githubusercontent.com/u/98923335?s=96&v=4)" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
+        <img src="https://avatars.githubusercontent.com/u/98923335?s=96&v=4" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
         <sub>
           <b>Mariana Mendes</b>
         </sub>
