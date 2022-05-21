@@ -15,11 +15,6 @@ const history = useRequestData(`${BASE_URL}/orders/history`,[])
 const [info,setInfo] = useState()
 const nav = useNavigate()
 
-
-const test = ()=>{
-    console.log(history)
-}
-
 useEffect(()=>{
     setInfo(profile.data.user)
 },[profile])

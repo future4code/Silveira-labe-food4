@@ -1,20 +1,40 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import CardProduto from '../components/CardProduto/CardProduto';
 import { BASE_URL } from '../constants/urls';
 import GlobalStateContext from '../context/GlobalStateContext';
 import { Banner, Local, MainContainer } from '../pages/Styled/RestauranteStyled';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import styled from 'styled-components';
+import { goToHome } from '../routes/cordinator';
+
+const Menu = styled.div`
+display: flex;
+align-items: center;
+width: 100%;
+position: relative;
+margin-top: 10px;
+
+h3{
+    width: 100%;
+}
+
+.back{
+    position: absolute;
+    left: 30px;
+}
+`
 
 export const Restaurante = () => {
   const [rest, setRest] = useState({})
   const { states, setters } = useContext(GlobalStateContext)
   const params = useParams()
+  const nav = useNavigate()
   // const restaurante = 1
-  const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJXVU1Bc0JSS2hGcGZYbmdPTEtjIiwibmFtZSI6Ikx1aXMiLCJlbWFpbCI6Imx1aXNfZW1haWxAaG90bWFpbC5jb20iLCJjcGYiOiIxMTEuMTExLjExMS0xNSIsImhhc0FkZHJlc3MiOnRydWUsImFkZHJlc3MiOiJSLiBkYSBHbMOzcmlhLCAyMTAsIENhc2EgLSBDZW50cm8iLCJpYXQiOjE2NTI4MTU1MzZ9.yKNU8UZnKAEoZN_KYX9AuDtpB3rg9yPS58GNrnhhZmY"
 
   const pegaRestDetail = () => {
-    axios.get(`${BASE_URL}/restaurants/${params.id}`, { headers: { auth: token } })
+    axios.get(`${BASE_URL}/restaurants/${params.id}`, { headers: { auth: localStorage.getItem('token') } })
       .then((response) => {
         setRest(response.data.restaurant)
         setters.setProdutos(response.data.restaurant.products)
@@ -30,6 +50,10 @@ export const Restaurante = () => {
 
   return (
     <MainContainer>
+      <Menu>
+                <ArrowBackIosNewIcon onClick={()=>goToHome(nav)}  className="back"/>
+                <h3 style={{textAlign: "center"}}>Restaurante</h3>
+            </Menu>
       {params.produto}
       {rest && rest.name ?
         <Local>
