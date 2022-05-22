@@ -33,25 +33,25 @@ const CardProduto = (props) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const [number, setNumber] = useState(1);
+  
 
-
-  // const checkCart = (id) => {
-  //   const checkProduct = states.cart.find((produto) => produto.id === id)
-  //   return checkProduct
-  // }
+  const onChangeNumber = (e)=>{
+    setNumber(e.target.value)
+    console.log(number)
+  }
 
   const addToCart = (id) => {
     const newProductList = [...states.cart];
-    newProductList.push(props.produto)
+    for(let i=0 ; i < number; i++){
+      newProductList.push(props.produto)
+    }
     setters.setCart(newProductList)
-    // console.log("CARRINHO: ", states.cart)
-    // {console.log(checkCart)}
     setInCart(true)
   }
 
   const removeFromCart = (id) => {
     const newProductList = [...states.cart];
-    // const selectedProduct = states.produtos.findIndex((produto) => produto.id === id)
     const selectedProduct = states.cart.map((item, index) => {
       if (item.id === id) {
         return index
@@ -60,26 +60,12 @@ const CardProduto = (props) => {
     newProductList.splice(selectedProduct, 1)
     setters.setCart(newProductList)
     setInCart(false)
-    // console.log("CARRINHO: ", states.cart)
-    // {console.log(checkCart)}
   }
 
   const handleModal = ()=>{
     addToCart(props.id)
     handleClose()
   }
-
-
-  // const checkCart = states.cart.find(produto => produto.id === props.id) ? true : false
-  // useEffect(() => {
-  //   states.cart.forEach((produto) => {
-  //     if (produto.id === props.id) {
-  //       setInCart(true);
-  //     } else {
-  //       setInCart(false);
-  //     }
-  //   })
-  // }, [states.cart])
 
   console.log(states.cart)
   console.log(states.cart)
@@ -112,26 +98,21 @@ const CardProduto = (props) => {
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
-            <select>
-              <option> 1 </option>
-              <option> 2 </option>
-              <option> 3 </option>
-              <option> 4 </option>
-              <option> 5 </option>
-              <option> 6 </option>
-              <option> 7 </option>
-              <option> 8 </option>
-              <option> 9 </option>
-              <option> 10 </option>
+            <select onChange={onChangeNumber}>
+              <option value={1}> 1 </option>
+              <option value={2}> 2 </option>
+              <option value={3}> 3 </option>
+              <option value={4}> 4 </option>
+              <option value={5}> 5 </option>
+              <option value={6}> 6 </option>
+              <option value={7}> 7 </option>
+              <option value={8}> 8 </option>
+              <option value={9}> 9 </option>
+              <option value={10}> 10 </option>
             </select>
             <button onClick={handleModal}>Adicionar ao carrinho</button>
           </Box>
         </Modal>
-
-
-        {/* <button onClick={checkCart ? () => removeFromCart(props.id) : () => addToCart(props.id)}>
-          {checkCart ? "Remover" : "Adicionar"}
-        </button> */}
       </Conteudo>
     </MainContainer >
   )

@@ -7,7 +7,8 @@ import { useRequestData } from "../hooks/useRequestData"
 import styled from "styled-components"
 import { MenuFixo } from "../components/MenuFixo"
 import { useNavigate } from "react-router-dom"
-
+import { Button } from "@mui/material"
+import axios from "axios"
 
 const Menu = styled.div`
 display: flex;
@@ -18,6 +19,10 @@ position: relative;
 h3{
     width: 100%;
 }
+`
+
+const PlaceOrder = styled.form`
+
 `
 
 export const Address = styled.div`
@@ -37,12 +42,32 @@ p{
 }
 `
 
+export const CenterButton = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5px;
+    width: 100%;
+
+    a{
+        color: #E86E5A;
+        text-decoration: underline;
+    }
+
+    Button{
+        width: 95%;
+        margin: 10px;
+    }
+`
+
 export const Products = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
 gap: 10px;
 width: 100%;
+margin-bottom: 30px;
 `
 export const Container = styled.div`
 display: flex;
@@ -54,26 +79,37 @@ hr{
     margin: 0;
 }
 `
+export const PaymentMethod = styled.div`
+
+`
 
 
 export function Carrinho(){
     const {states,setters} = useContext(GlobalStateContext)
     const address = useRequestData(`${BASE_URL}/profile`,{})
     const [info,setInfo] = useState()
+    const [method,setMethod] = useState()
     const nav = useNavigate()
 
-    const teste = ()=> { 
-        
+    const onSubmitOrder = (e)=> { 
+        e.preventDefault()
+    }
+
+    const onChangeMethod = (e)=> { 
+        setMethod(e.target.value)
     }
 
     useEffect(()=>{
         setInfo(address.data.user)
     },[address])
 
-    const listaCarrinho =states.cart && states.cart.map((produto)=>{
+    const listaCarrinho =states.cart && states.cart.filter((element,pos)=>{
+        return states.cart.indexOf(element) == pos
+    }).map((produto)=>{
         return <CardCarrinho
         name={produto.name}
         key={produto.id}
+        id={produto.id}
         description={produto.description}
         price={produto.price}
         photoUrl={produto.photoUrl}
@@ -95,7 +131,16 @@ export function Carrinho(){
             <Products>
                 {listaCarrinho}
             </Products>
-            <button onClick={teste}>teste</button>
+            <hr/>
+            <PlaceOrder onSubmit={onSubmitOrder}>
+                <PaymentMethod >
+                    <input onChange={onChangeMethod} value={'money'} type={'checkbox'}/> dinheiro
+                    <input onChange={onChangeMethod} value={'creditcard'} type={'checkbox'}/> cartão de credito
+                </PaymentMethod>
+                <CenterButton>
+                        <Button style={{ backgroundColor: "#E86E5A", width: "100%" }} variant="contained" type="submit">Confirmar Compra</Button>
+                </CenterButton>
+            </PlaceOrder>
             <MenuFixo navigate={nav}  isCartPage/>
         </Container>
     )
