@@ -1,5 +1,7 @@
-import React from "react"
+import { SystemUpdateAltSharp } from "@mui/icons-material"
+import React, { useContext, useEffect, useState } from "react"
 import styled from "styled-components"
+import GlobalStateContext from "../context/GlobalStateContext"
 
 const Card = styled.div`
 display: flex;
@@ -25,6 +27,17 @@ const Info = styled.div`
 `
 
 export function CardCarrinho(props){
+    const {states,setters} = useContext(GlobalStateContext)
+    let [count,setCount] = useState(0)
+
+    useEffect(()=>{
+        for(const item of states.cart){
+            if(item.id === props.id){
+                setCount(count += 1)
+            }
+        }
+    },[])
+
     return (
         <Card>
             <Imagem>
@@ -33,7 +46,8 @@ export function CardCarrinho(props){
             <Info>
             <h1>{props.name}</h1>
             <p>{props.description}</p>
-            <h3>{props.price}</h3>
+            <h3>{props.price} R$</h3>
+            <h3>Contagem: {count}</h3>
             </Info>
         </Card>
     )
