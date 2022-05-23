@@ -116,6 +116,24 @@ export function Carrinho(){
         />
     })
 
+    const checkQuantity = (id) => {
+        let quantidade = 0;
+
+        for(const item of states.cart) {
+            if(item.id === id) {
+                quantidade++;
+            }
+        }
+
+        return quantidade;
+    };
+
+    const testeLista = states.cart.map((produto) => {
+        return {id: produto.id, quantity: checkQuantity(produto.id)}
+    })
+
+    console.log(testeLista)
+
 
     return(
         <Container>
