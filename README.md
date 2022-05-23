@@ -4,7 +4,7 @@ descrever o projeto aqui
 
 ## Link do Surge
 
-https://rappi4bsilveiralabefood.surge.sh/carrinho
+https://rappi4bsilveiralabefood.surge.sh
 
 ## :camera: Imagens
 
