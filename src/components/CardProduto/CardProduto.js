@@ -1,6 +1,4 @@
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import React, { useContext, useEffect, useState } from 'react'
 import GlobalStateContext from '../../context/GlobalStateContext'
@@ -62,10 +60,23 @@ const CardProduto = (props) => {
     setInCart(false)
   }
 
+  const setRestaurantInCart = ()=>{
+    setters.setRestaurant(props.resId)
+  }
+
   const handleModal = ()=>{
     addToCart(props.id)
     handleClose()
+    setRestaurantInCart()
   }
+
+  useEffect(()=>{
+    states.cart.forEach((item)=>{
+      if(item.id === props.id){
+        setInCart(true)
+      }
+    })
+  },[])
 
   console.log(states.cart)
   console.log(states.cart)
