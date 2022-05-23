@@ -116,6 +116,7 @@ export function Carrinho(){
         axios.post(`${BASE_URL}/restaurants/${states.restaurant}/order`,BODY,headers)
         .then((res)=>{
             alert('pedido realizado com sucesso')
+            setters.setCart([])
         })
         .catch((err)=>{
             console.log(err)
