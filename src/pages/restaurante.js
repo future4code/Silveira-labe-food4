@@ -14,7 +14,7 @@ display: flex;
 align-items: center;
 width: 100%;
 position: relative;
-margin-top: 10px;
+border-bottom: 1px solid grey;
 
 h3{
     width: 100%;
@@ -51,16 +51,15 @@ export const Restaurante = () => {
   return (
     <MainContainer>
       <Menu>
-                <ArrowBackIosNewIcon onClick={()=>goToHome(nav)}  className="back"/>
-                <h3 style={{textAlign: "center"}}>Restaurante</h3>
-            </Menu>
+          <ArrowBackIosNewIcon onClick={()=>goToHome(nav)}  className="back"/>
+          <h3 style={{textAlign: "center"}}>Restaurante</h3>
+      </Menu>
       {params.produto}
       {rest && rest.name ?
         <Local>
           <Banner src={rest.logoUrl} />
           <p
             className='titulo'>{rest.name}
-            <button>Voltar</button>
           </p>
           <p>{rest.category}</p>
           <div>

@@ -1,8 +1,6 @@
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import GlobalStateContext from '../../context/GlobalStateContext'
 import {
   Banner,
@@ -38,7 +36,6 @@ const CardProduto = (props) => {
 
   const onChangeNumber = (e)=>{
     setNumber(e.target.value)
-    console.log(number)
   }
 
   const addToCart = (id) => {
@@ -57,7 +54,7 @@ const CardProduto = (props) => {
         return index
       }
     });
-    newProductList.splice(selectedProduct, 1)
+    newProductList.splice(selectedProduct, number)
     setters.setCart(newProductList)
     setInCart(false)
   }
@@ -66,9 +63,6 @@ const CardProduto = (props) => {
     addToCart(props.id)
     handleClose()
   }
-
-  console.log(states.cart)
-  console.log(states.cart)
 
   return (
     <MainContainer>
