@@ -38,6 +38,8 @@ export function CardCarrinho(props){
         }
     },[])
 
+props.checkQuantity(props.id)
+
     return (
         <Card>
             <Imagem>

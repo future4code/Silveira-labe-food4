@@ -9,6 +9,7 @@ import { MenuFixo } from "../components/MenuFixo"
 import { useNavigate } from "react-router-dom"
 import { Button } from "@mui/material"
 import axios from "axios"
+import { ProductionQuantityLimitsRounded } from "@mui/icons-material"
 
 const Menu = styled.div`
 display: flex;
@@ -49,6 +50,7 @@ export const CenterButton = styled.div`
     flex-direction: column;
     margin-top: 5px;
     width: 100%;
+    margin-bottom: 60px;
 
     a{
         color: #E86E5A;
@@ -88,22 +90,62 @@ export function Carrinho(){
     const {states,setters} = useContext(GlobalStateContext)
     const address = useRequestData(`${BASE_URL}/profile`,{})
     const [info,setInfo] = useState()
-    const [method,setMethod] = useState()
+    const [method,setMethod] = useState('money')
+    const [body,setBody] = useState([])
+    let [count,setCount] = useState(0)
     const nav = useNavigate()
 
     const onSubmitOrder = (e)=> { 
         e.preventDefault()
+
+        const headers = {
+            headers: {auth: localStorage.getItem('token')}
+        }
+
+        const BODY = {
+            products: states.cart && states.cart.filter((element,pos)=>{
+                return states.cart.indexOf(element) == pos
+            }).map((produto)=>{
+                return {id: produto.id, quantity: checkQuantity(produto.id)}
+            }),
+            paymentMethod: method
+        }
+
+        console.log(states.restaurant)
+
+        axios.post(`${BASE_URL}/restaurants/${states.restaurant}/order`,BODY,headers)
+        .then((res)=>{
+            console.log(res)
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+    }
+
+    const checkQuantity = (id)=>{
+        let quantity = 0
+        for(const item of states.cart){
+            if(item.id == id){
+                quantity++
+            }
+        }
+        return quantity
     }
 
     const onChangeMethod = (e)=> { 
         setMethod(e.target.value)
+        console.log(method)
     }
 
     useEffect(()=>{
         setInfo(address.data.user)
     },[address])
 
-    const listaCarrinho =states.cart && states.cart.filter((element,pos)=>{
+    useEffect(()=>{
+        setInfo(address.data.user)
+    },[])
+
+    const listaCarrinho = states.cart && states.cart.filter((element,pos)=>{
         return states.cart.indexOf(element) == pos
     }).map((produto)=>{
         return <CardCarrinho
@@ -113,9 +155,9 @@ export function Carrinho(){
         description={produto.description}
         price={produto.price}
         photoUrl={produto.photoUrl}
+        checkQuantity={checkQuantity}
         />
     })
-
 
     return(
         <Container>
@@ -134,8 +176,8 @@ export function Carrinho(){
             <hr/>
             <PlaceOrder onSubmit={onSubmitOrder}>
                 <PaymentMethod >
-                    <input onChange={onChangeMethod} value={'money'} type={'checkbox'}/> dinheiro
-                    <input onChange={onChangeMethod} value={'creditcard'} type={'checkbox'}/> cartão de credito
+                    <input onChange={onChangeMethod} checked name='method' value={'money'} type={'radio'}/> dinheiro
+                    <input onChange={onChangeMethod} name='method' value={'creditcard'} type={'radio'}/> cartão de credito
                 </PaymentMethod>
                 <CenterButton>
                         <Button style={{ backgroundColor: "#E86E5A", width: "100%" }} variant="contained" type="submit">Confirmar Compra</Button>
