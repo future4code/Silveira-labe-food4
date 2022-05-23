@@ -5,10 +5,11 @@ const GlobalState = (props) => {
 
 const [cart,setCart] = useState([])
 const [produtos,setProdutos] = useState([])
-const [restaurant,setRestauran] = useState([])
+const [restaurant,setRestaurant] = useState([])
+const [postBody,setPostBody] = useState([])
 
-const states = {restaurant, cart, produtos }
-const setters = {setRestauran, setCart, setProdutos }
+const states = {postBody,restaurant, cart, produtos }
+const setters = {setRestaurant,setRestaurant, setCart, setProdutos }
 const requests = {}
 
     return <GlobalStateContext.Provider value={{states, setters, requests}}>

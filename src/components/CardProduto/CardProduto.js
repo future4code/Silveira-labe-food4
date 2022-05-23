@@ -59,10 +59,23 @@ const CardProduto = (props) => {
     setInCart(false)
   }
 
+  const setRestaurantInCart = ()=>{
+    setters.setRestaurant(props.resId)
+  }
+
   const handleModal = ()=>{
     addToCart(props.id)
     handleClose()
+    setRestaurantInCart()
   }
+
+  useEffect(()=>{
+    states.cart.forEach((item)=>{
+      if(item.id === props.id){
+        setInCart(true)
+      }
+    })
+  },[])
 
   return (
     <MainContainer>

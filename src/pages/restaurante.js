@@ -31,7 +31,6 @@ export const Restaurante = () => {
   const { states, setters } = useContext(GlobalStateContext)
   const params = useParams()
   const nav = useNavigate()
-  // const restaurante = 1
 
   const pegaRestDetail = () => {
     axios.get(`${BASE_URL}/restaurants/${params.id}`, { headers: { auth: localStorage.getItem('token') } })
@@ -78,6 +77,7 @@ export const Restaurante = () => {
           nome={produto.name}
           descricao={produto.description}
           preco={produto.price}
+          resId={rest.id}
         />;
       }) :
         <h2>Carregando lista de produtos!</h2>}
