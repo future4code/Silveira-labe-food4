@@ -19,23 +19,23 @@ export const Local = styled.div`
     width: 90%;
     color: #000000;
     margin-top: 20px;
-    p{
+
+    p {
         margin: 5px 15px;
         margin-left: 0;
+        color: #b8b8b8;
     }
-    .titulo{
+
+    .titulo {
         color: #E86E5A;
+        font-weight: bolder;
     }
-    div{
+
+    div {
         display: flex;
     }
 `
 export const Banner = styled.div`
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    position: relative;
-    width: 100%;
     height: 150px;
     border-radius: 15px 15px 0px 0px;
     background-image: url(${(props) => props.src});
