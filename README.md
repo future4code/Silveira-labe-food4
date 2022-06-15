@@ -2,7 +2,7 @@
 
 # :fork_and_knife: Projeto Rappi4 :hamburger:
 
-Rappi4 é uma aplicação para mobile inspirada no aplicativo Rappi, uma plataforma de entrega de pedidos de restaurantes, farmácias, mercados e relacionados.
+Rappi4 é uma aplicação construida usando o método mobile first e inspirada no aplicativo Rappi, uma plataforma de entrega de pedidos de restaurantes, farmácias, mercados e relacionados.
 
 ## 🚨 Como acessar
 
