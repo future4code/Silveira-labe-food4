@@ -1,3 +1,5 @@
+<img src="https://raw.githubusercontent.com/future4code/Silveira-labe-food4/2aad2342e6a6bbef902aaa3265a095878187ff78/src/assets/logo%403x.png" width="130px" alt="Logo Rappi4" />
+
 # :fork_and_knife: Projeto Rappi4 :hamburger:
 
 Rappi4 é uma aplicação para mobile inspirada no aplicativo Rappi, uma plataforma de entrega de pedidos de restaurantes, farmácias, mercados e relacionados.
