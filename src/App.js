@@ -1,24 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import {createGlobalStyle} from 'styled-components'
+import {Router} from './routes/routes';
+import styled from 'styled-components';
+import splashScreen from './assets/SplashScreen.png'
+import GlobalState from './context/GlobalState';
+
+
+const GLobalStyle = createGlobalStyle`
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
+}
+`
+
+const SplashScreen = styled.div`
+width: 100vw;
+height: 100vh;
+background-image: url(${splashScreen});
+background-size: cover;
+background-repeat: no-repeat;
+`
 
 function App() {
+const [loading,setLoading] = useState(true)
+
+useEffect(()=>{
+  setTimeout(()=>{
+    setLoading(false)
+  },3000)
+},[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+    <GlobalState>
+      <GLobalStyle/>
+      {loading? <SplashScreen /> : <Router/>}
+    </GlobalState>
     </div>
   );
 }

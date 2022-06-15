@@ -1,68 +1,83 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="https://raw.githubusercontent.com/future4code/Silveira-labe-food4/2aad2342e6a6bbef902aaa3265a095878187ff78/src/assets/logo%403x.png" width="130px" alt="Logo Rappi4" />
 
-## Available Scripts
+# :fork_and_knife: Projeto Rappi4 :hamburger:
 
-In the project directory, you can run:
+Rappi4 é uma aplicação construida usando o método mobile first e inspirada no aplicativo Rappi, uma plataforma de entrega de pedidos de restaurantes, farmácias, mercados e relacionados.
 
-### `npm start`
+## 🚨 Como acessar
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Realizar login caso já possua cadastro;
+- Realizar cadastro de conta e endereço, após isso, automaticamente será redirecionado para a página principal de restaurantes.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## :link: Link para visualização do site (surge)
 
-### `npm test`
+<a href="https://rappi4bsilveiralabefood.surge.sh">Rappi4</a>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :camera: Imagens do projeto
 
-### `npm run build`
+<div>
+  <img src="https://i.imgur.com/bSqKkDZ.png" width="180px" alt="Screenshot Projeto Rappi4" />
+  <img src="https://i.imgur.com/TT0W78R.png" width="180px" alt="Screenshot Projeto Rappi4" />
+  <img src="https://i.imgur.com/hez8U8S.png" width="180px" alt="Screenshot Projeto Rappi4" />
+</div>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<div>
+  <img src="https://i.imgur.com/9VEYnZQ.png" width="180px" alt="Screenshot Projeto Rappi4" />
+  <img src="https://i.imgur.com/YHVb1su.png" width="180px" alt="Screenshot Projeto Rappi4" />
+  <img src="https://i.imgur.com/N2kiNWV.png" width="180px" alt="Screenshot Projeto Rappi4" />
+</div>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## :wrench: Tecnologias utilizadas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- ReactJS
+- React Hooks
+- Global Context
+- Styled-Components
+- Material UI
 
-### `npm run eject`
+## 👨‍💻 Desenvolvedores
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/mariana-mendes-ab60a2164/">
+        <img src="https://avatars.githubusercontent.com/u/98923335?s=96&v=4" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
+        <sub>
+          <b>Mariana Mendes</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/luisfmelot/">
+        <img src="https://avatars.githubusercontent.com/u/79599836?v=4" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+        <sub>
+          <b>Luis Felipe Melo </b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/jo%C3%A3o-marcos-alves-de-aguiar-655638222/">
+        <img src="https://avatars.githubusercontent.com/u/90418883?v=4" width="100px;" alt="foto do João"/><br>
+        <sub>
+          <b>João Marcos Alves</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/luian-gabriel-barbosa-de-jesus-costa-654906234/">
+        <img src="https://avatars.githubusercontent.com/u/99013911?v=4" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+        <sub>
+          <b>Luian Costa </b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/luis-gustavo-martins-06230222b/">
+        <img src="https://avatars.githubusercontent.com/u/99142835?v=4" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+        <sub>
+          <b>Luis Gustavo</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
