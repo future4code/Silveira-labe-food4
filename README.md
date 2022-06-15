@@ -1,32 +1,39 @@
-# :hamburger: Rappi4B 
+# :fork_and_knife: Projeto Rappi4 :hamburger:
 
-descrever o projeto aqui
+Rappi4 é uma aplicação para mobile inspirada no aplicativo Rappi, uma plataforma de entrega de pedidos de restaurantes, farmácias, mercados e relacionados.
 
-## Link do Surge
+## 🚨 Como acessar
 
-https://rappi4bsilveiralabefood.surge.sh
+- Realizar login caso já possua cadastro;
+- Realizar cadastro de conta e endereço, após isso, automaticamente será redirecionado para a página principal de restaurantes.
 
-## :camera: Imagens
+## :link: Link para visualização do site (surge)
 
-imagens do projeto aqui
+<a href="https://rappi4bsilveiralabefood.surge.sh">Rappi4</a>
 
-## :rocket: Tecnologias
+## :camera: Imagens do projeto
 
-tecnologias usadas
+<div>
+  <img src="https://i.imgur.com/bSqKkDZ.png" width="180px" alt="Screenshot Projeto Rappi4" />
+  <img src="https://i.imgur.com/TT0W78R.png" width="180px" alt="Screenshot Projeto Rappi4" />
+  <img src="https://i.imgur.com/hez8U8S.png" width="180px" alt="Screenshot Projeto Rappi4" />
+</div>
 
-## :thumbsup: O que funciona
+<div>
+  <img src="https://i.imgur.com/9VEYnZQ.png" width="180px" alt="Screenshot Projeto Rappi4" />
+  <img src="https://i.imgur.com/YHVb1su.png" width="180px" alt="Screenshot Projeto Rappi4" />
+  <img src="https://i.imgur.com/N2kiNWV.png" width="180px" alt="Screenshot Projeto Rappi4" />
+</div>
 
-- item1
-- item2
-- item3
+## :wrench: Tecnologias utilizadas
 
-## :thumbsdown: O que não funciona
+- ReactJS
+- React Hooks
+- Global Context
+- Styled-Components
+- Material UI
 
-- item1
-- item2
-- item3
-
-## :sunglasses: Contribuidores
+## 👨‍💻 Desenvolvedores
 
 <table>
   <tr>
